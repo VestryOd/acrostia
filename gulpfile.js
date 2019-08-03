@@ -25,7 +25,8 @@ var path = {
         img: 'dist/assets/img',
         static: 'dist/',
         fonts: 'dist/assets/fonts',
-        icons: 'dist/assets/icons'
+        icons: 'dist/assets/icons',
+        docs: 'docs/'
     },
     src: {
         html: 'src/index.html',
@@ -36,7 +37,8 @@ var path = {
         img: 'src/assets/img/**/*.*',
         icons: 'src/assets/icons/**/*.*',
         static: 'src/static/**/*.*',
-        fonts: 'src/assets/fonts/**/*.*'
+        fonts: 'src/assets/fonts/**/*.*',
+        dist: 'dist/**/*.*'
     },
     watch: {
         html: 'src/**/*.html',
@@ -70,7 +72,7 @@ function styles() {
                 cascade: true
             }))
             .pipe(cleanCSS({
-                level: 1
+                level: 0
             }))
         .pipe(sourcemaps.write(path.dist.mapcss))
         .pipe(gulp.dest(path.dist.style))
@@ -139,8 +141,17 @@ function images() {
         .pipe(browserSync.stream());
 };
 
+function docs() {
+    return gulp.src(path.src.dist)
+        .pipe(gulp.dest(path.dist.docs));
+}
+
 function clean() {
     return del(['dist/*']);
+};
+
+function cleanDocs() {
+    return del(['docs/*']);
 };
 
 function clear() {
@@ -178,6 +189,7 @@ gulp.task('fonts:build', fonts);
 gulp.task('icons:build', icons);
 gulp.task('images:build', images);
 gulp.task('other:build', other);
+gulp.task('docs:build', gulp.series(cleanDocs, docs));
 
 gulp.task('build', gulp.series(clean,
                         gulp.parallel(
