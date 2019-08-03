@@ -4,18 +4,10 @@
 }
 .header__slider {
     width: 100%;
-    // height: 100vh;
-    .slick-dotted .slick-slider {
-        margin-bottom: 0;
-    }
 
     .item {
         width: inherit;
         position: relative;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // overflow: hidden;
         img {
             height: inherit;
             width: inherit;
@@ -44,7 +36,6 @@
                     line-height: 100%;
                     max-width: 840px;
                     h2, h3, h1 {
-                        // max-width: 380px;
                         text-align: right;
                         padding: 10px;
                     }
@@ -66,6 +57,9 @@
             }
         }
     }
+}
+#header #slider #sliderWrapper {
+    margin-bottom: 0;
 }
 
 .sliderNav {

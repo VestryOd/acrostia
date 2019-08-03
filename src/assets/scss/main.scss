@@ -7,9 +7,10 @@
 //Common settimgs
 html {
     line-height: $mainLineHeight;
-      font-size: $mainFontSize;
-      color: $mainFontColor;
+    font-size: $mainFontSize;
+    color: $mainFontColor;
     height: 100%;
+    overflow-x: hidden;
     // @media screen and (max-width: $desktopWidth) {
     //       font-size: 16px;
     // }
@@ -24,8 +25,9 @@ html {
   body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     font-family: $LatoRegular;
-      font-size: $mainFontSize;
+    font-size: $mainFontSize;
     font-weight: $mainFontWeight;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -61,9 +63,9 @@ html {
 }
 
 // Modules
+@import "modules/common.scss";
 @import "modules/slider.scss";
 @import "modules/header.scss";
-@import "modules/common.scss";
 @import "modules/services.scss";
 @import "modules/about.scss";
 @import "modules/portfolio.scss";
