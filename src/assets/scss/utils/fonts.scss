@@ -1,0 +1,14 @@
+// Fonts here
+// see more: https://github.com/vedees/webpack-template/blob/master/README.md#import-js-files
+
+@import "utils/mixins";
+
+@include font-face("Lato-Thin", "assets/fonts/lato/lato-thin", normal, normal, eot woff2 woff ttf svg);
+@include font-face("Lato-Light", "assets/fonts/lato/lato-light", normal, normal, eot woff2 woff ttf svg);
+@include font-face("Lato-Regular", "assets/fonts/lato/lato-regular", normal, normal, eot woff2 woff ttf svg);
+@include font-face("Lato-Bold", "assets/fonts/lato/lato-bold", normal, normal, eot woff2 woff ttf svg);
+@include font-face("Lato-Black", "assets/fonts/lato/lato-black", normal, normal, eot woff2 woff ttf svg);
+
+@include font-face("Damion", "assets/fonts/damion/damion-regular", normal, normal, eot woff2 woff ttf svg);
+@include font-face("slick", "assets/fonts/slick/slick", normal, normal, eot woff ttf svg);
+@include font-face("themify", "assets/fonts/themify/themify", normal, normal, eot woff ttf svg);

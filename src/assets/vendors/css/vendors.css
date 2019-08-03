@@ -1,0 +1,27 @@
+/* Insert third-party library files here */
+/* Ivport from bower_components dir or from node_modules/ */
+/* @import '../../../node_modules/slick-carousel/slick/slick.css'; */
+
+@import url('../../../../bower_components/normalize.css/normalize.css');
+@import url('../../../../bower_components/bootstrap/dist/css/bootstrap-grid.min.css');
+@import url('../../../../bower_components/animate.css/animate.min.css');
+
+/*!
+Slick-Carousel
+**************
+https://kenwheeler.github.io/slick/
+*/
+@import url('../../../../bower_components/slick-carousel/slick/slick.css');
+@import url('../../../../bower_components/slick-carousel/slick/slick-theme.css');
+/*!
+themify-icons
+**************
+https://themify.me/themify-icons
+*/
+@import url('../../../../bower_components/themify-icons/css/themify-icons.css');
+/*!
+magnific-popup
+**************
+https://github.com/dimsemenov/Magnific-Popup
+*/
+@import url('../../../../bower_components/magnific-popup/dist/magnific-popup.css');

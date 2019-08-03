@@ -1,0 +1,78 @@
+// @import "utils/libs";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/vars";
+@import "utils/reset";
+
+//Common settimgs
+html {
+    line-height: $mainLineHeight;
+      font-size: $mainFontSize;
+      color: $mainFontColor;
+    height: 100%;
+    // @media screen and (max-width: $desktopWidth) {
+    //       font-size: 16px;
+    // }
+    // @media screen and (max-width: $tableWidth) {
+    //       font-size: 15px;
+    // }
+    // @media screen and (max-width: $phoneWidth) {
+    //       font-size: 14px;
+    // }
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: $LatoRegular;
+      font-size: $mainFontSize;
+    font-weight: $mainFontWeight;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  *, *:before, *:after { box-sizing: border-box; }
+  
+  h1, h2, h3, h4, h5, h6 { margin: 0; }
+  
+  a { text-decoration: none; }
+  
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+.noSelect {
+  // to remove blue outline in Android Chrome and similar brousers
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.menuIcons {
+  font-family: 'themify';
+  cursor: pointer;
+  color: $default-color;
+}
+
+// Modules
+@import "modules/slider.scss";
+@import "modules/header.scss";
+@import "modules/common.scss";
+@import "modules/services.scss";
+@import "modules/about.scss";
+@import "modules/portfolio.scss";
+@import "modules/contacts.scss";
+
+
+
+
+
+
+@import "modules/footer.scss";
+

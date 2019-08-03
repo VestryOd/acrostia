@@ -1,0 +1,104 @@
+#portfolio {
+    background: url(../img/bg_green.jpg) center center repeat-y;
+    background-size: cover;
+    background-color: $green ;
+    height: auto;
+    .portfolioTitle {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    .portfolioNav {
+        font-family: $LatoBold;
+        .portfolioLine {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2em 15px;
+            box-sizing: border-box;
+            border-top: 1px solid $greenLine;
+            border-bottom: 1px solid $greenLine;
+            
+            nav {
+                button {
+                    padding: 10px;
+                    border-radius: 5px;
+                    background-color: transparent;
+                    color: $default-color;
+                    letter-spacing: 1px;
+                    transition: background-color 0.5s ease-in-out;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: $sortButtonHover;
+                    }
+                }
+                label {
+                    font-family: $LatoLight;
+                }
+            }
+        }  
+    }
+    .contentItems {
+        .jcCenter {
+            display: flex;
+            justify-content: center;
+        }
+        .previewWrapper {
+            width: 260px;
+            height: 250px;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            &:hover .portfolioImgCover {
+                opacity: 1;
+            }
+            .portfolioImgCover {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 200px;
+                background-color: $portfolioPreviewHover;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out;
+                .portfolioZoom {
+                    font-family: $themify;
+                    font-size: 24px;
+                    line-height: 50px;
+                    text-align: center;
+                    background-color: transparent;
+                    width: 50px;
+                    height: 50px;
+                    border: 1px solid $default-color;
+                    border-radius: 50%;
+                }
+            }
+            .previewTitle {
+                font-size: 14px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                word-spacing: 2px;
+                width: 100%;
+                font-family: $LatoRegular;
+                color: $portfolioPreviewTitle;
+                background-color: $border-base;
+                line-height: 50px;
+                position: absolute;
+                text-align: center;
+                left: 0;
+                bottom: 0;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    border: 18px solid transparent;
+                    border-bottom-color: $border-base;
+                    left: 112px;
+                    top: -36px;
+                }
+            }
+        }
+    }
+}

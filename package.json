@@ -1,0 +1,35 @@
+{
+  "name": "cv_site",
+  "version": "2.1.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "repository": {},
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^3.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-cache": "^1.1.2",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-file-include": "^2.1.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browserslist": [
+    "last 3 version",
+    "> 1%",
+    "IE 11"
+  ],
+  "keywords": [],
+  "author": "VestryOd",
+  "license": "ISC"
+}

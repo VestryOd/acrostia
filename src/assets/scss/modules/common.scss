@@ -1,0 +1,62 @@
+.contentArticle {
+    width: 100%;
+    padding: 125px 0;
+    color: $default-color;
+    text-align: center;
+    .contentHeader {
+        padding: 3.5em 0;
+        text-transform: uppercase;
+        .contentTitle {
+            font-family: $LatoLight;
+            font-size: 2.5em;
+            line-height: 2.5em;
+            width: 100%;
+        }
+        .contentSubtitle {
+            font-size: 1em;
+            line-height: 2.5em;
+            width: 100%;
+        }
+        .contentDescription {
+            font-size: 0.7em;
+            line-height: 1.75em;
+            text-transform: none;
+            width: 100%;
+            padding: 0.5em 0 2.5em 0;
+        }
+    }
+}
+.content__svg {
+    fill: $red;
+}
+.grayscaleAnimateFilter {
+    filter: url('assets/img/gray.svg#grayscale'); /*! Firefox 10+, Firefox on Android */ 
+	filter: gray; /*! IE6-9 */
+	-webkit-filter: grayscale(1); /*! Google Chrome, Safari 6+ & Opera 15+ */
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all 0.5s ease-in-out;
+}
+
+// .grayscaleAnimateFilter:hover {
+// 	filter: none;
+// 	-webkit-filter: grayscale(0);
+// }
+
+.contentItem {
+    margin: 15px 0;
+}
+
+.preview {
+    object-fit: cover;
+}
+
+.scrolled {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.no_scroll {
+    background-color: transparent;
+}

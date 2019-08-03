@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head lang="ru">
+    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8">
+    <title>Acrostia | Design Studio</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+</head>
+<body>
+    
+   @@include('./templates/header.html')
+   <!-- //= ./templates/header.html -->
+   <!-- @@include('./templates/footer.html', {
+       "footer": "my awesome footer"
+   }) -->
+
+    <main>
+        @@include('./templates/services.html')
+        <!-- //= ./templates/services.html -->
+
+        @@include('./templates/about.html')
+        <!-- //= ./templates/about.html -->
+
+        @@include('./templates/portfolio.html')
+
+
+        @@include('./templates/contacts.html')
+    </main>
+<script type="text/javascript" src="assets/js/vendors.js"></script>
+<script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+</html>

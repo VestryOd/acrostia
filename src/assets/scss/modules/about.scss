@@ -1,0 +1,111 @@
+#about {
+    background: url(../img/bg_purple.jpg) center center repeat-y;
+    background-size: cover;
+    background-color: $purple ;
+    height: auto;
+    .contentHeader .contentSubtitle {
+        letter-spacing: 1px;
+        word-spacing: 3px;
+        font-family: $LatoBlack;
+        font-size: 1.25em;
+        line-height: 50px;
+        margin: 60px auto;
+        width: 276px;
+        height: 50px;
+        background-color: $greenHover;
+        position: relative;
+        border-radius: 10px;
+        &:after {
+            content: '';
+            position: absolute;
+            border: 30px solid transparent;
+            border-top-color: $greenHover;
+            left: 108px;
+            bottom: -60px;
+        }
+    }
+    .contentItems {
+        .aboutItem {
+            box-sizing: border-box;
+            border-radius: 10px;
+            background-color: $purpleItemBgc;
+            padding: 45px 10px;
+            height: 100%;
+            // transition: all 0.5s ease-in-out;
+            cursor: pointer;
+            .img__outer {
+                box-sizing: border-box;
+                width: 160px;
+                height: 160px;
+                border: 5px solid $purpleBorder;
+                border-radius: 50%;
+                margin: 0 auto;
+                background-color: $default-color;
+                transition: border-color 0.5s ease-in-out;
+                overflow: hidden;
+                padding: 3px;
+                .img__inner {
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+            }
+            .aboutTitle {
+                text-transform: uppercase;
+                font-family: $LatoBlack;
+                font-size: 1.25em;
+                line-height: 2.4em;
+                color: $aboutTitle;
+                transition: color 0.5s ease-in-out;
+            }
+            .aboutPosition {
+                font-size: 0.7em;
+                line-height: 1.5em;
+                color: $greenHover;
+                padding-bottom: 30px;
+                transition: color 0.5s ease-in-out;
+            }
+            .socialWrapper a {
+                font-family: $themify;
+                font-size: 0.75em;
+                color: $default-color;
+                padding: 10px;
+                margin: 0 5px;
+                background-color: $purpleBorder;
+                border-radius: 50%;
+                transition: background-color 0.5s ease-in-out;
+            }
+            &:hover {
+                .img__outer {
+                    border-color: $redHover;
+                }
+                .grayscaleAnimateFilter {
+                    filter: none;
+                    -webkit-filter: grayscale(0);
+                }
+                .aboutTitle {
+                    color: $default-color;
+                }
+                .aboutPosition {
+                    color: $redHover;
+                }
+                .aboutSocialLink[href*="facebook"] {
+                    background-color: $facebook;
+                }
+                .aboutSocialLink[href*="twitter"] {
+                    background-color: $twitter;
+                }
+                .aboutSocialLink[href*="google"] {
+                    background-color: $google;
+                }
+                .aboutSocialLink[href*="linkedin"] {
+                    background-color: $linkedin;
+                }
+            }
+        // &:hover {
+        //     .aboutItem .img__outer {
+        //         border-color: $redHover;
+        //     }
+        // }
+        }
+    }
+}
