@@ -4,6 +4,11 @@
     background-size: cover;
     background-color: $red;
     height: auto;
+    .contentSubtitle {
+        padding: 20px;
+        line-height: 2em;
+        word-spacing: 1px;
+    }
     .contentItems {
         // min-height: 400px;
         // height: 1px;

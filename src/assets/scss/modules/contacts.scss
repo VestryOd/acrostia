@@ -15,7 +15,18 @@
         .requisitesArea {
             font-style: normal;
             display: flex;
-            justify-content: space-between;
+            flex-direction: row;
+            // justify-content: space-between;
+            min-height: 260px;
+            .requisitesData, .requisitesMap {
+                width: calc(50% - 12px);
+                &:nth-child(1) {
+                    margin-right: 20px;
+                }
+                > div {
+                    width: 100%;
+                }
+            }
             .requisitesData {
                 font-size: 16px;
                 line-height: 20px;
@@ -34,11 +45,12 @@
                 }
             }
             .requisitesMap {
-                width: 280px;
-                height: 260px;
+                min-height: 260px;
+                height: 100%;
                 border: 1px solid $default-color;
                 border-radius: 5px;
                 overflow: hidden;
+                box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
             }
         }
         .feedbackArea {
@@ -100,28 +112,78 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 150px;
+        height: 100px;
         width: 100%;
         background-color: $formBgc;
         .socialWrapper {
             max-width: 360px;
             width: 100%;
+            display: flex;
+            justify-content: space-between;
             .socialLink {
                 box-sizing: border-box;
                 font-family: $themify;
-                font-size: 30px;
-                line-height: 60px;
-                // width: 60px;
-                // height: 60px;
                 border-radius: 50%;
                 color: $default-color;
                 padding: 15px;
                 background-color: $blueHover;
-                margin-right: 35px;
-                &:nth-child(4) {
+                font-size: 20px;
+                line-height: 20px;
+                transition: background-color 0.5s ease-in-out;
+            }
+            .socialLink[href*="facebook"]:hover {
+                background-color: $facebook;
+            }
+            .socialLink[href*="twitter"]:hover {
+                background-color: $twitter;
+            }
+            .socialLink[href*="google"]:hover {
+                background-color: $google;
+            }
+            .socialLink[href*="linkedin"]:hover {
+                background-color: $linkedin;
+            }
+        }
+    }
+}
+
+@media (max-width: $phoneWidth) {
+    #contacts {
+        .contentItems{
+            .requisitesArea {
+                flex-direction: column;
+                .requisitesData, .requisitesMap {
+                    width: 100%;
+                    line-height: 30px;
+                    &:nth-child(1) {
+                        margin-right: 0;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            .feedbackArea {
+                input {
+                    width: 100%;
+                    &:nth-child(1) {
+                        margin-right: 0;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+        #footer {
+            height: 80px;
+            .socialWrapper {
+                display: flex;
+                justify-content: space-around;
+                .socialLink {
+                    font-size: 15px;
+                    line-height: 15px;
+                    padding: 15px;
                     margin-right: 0;
                 }
             }
         }
     }
+    
 }

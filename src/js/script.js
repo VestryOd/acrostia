@@ -50,24 +50,17 @@ $(function(){
 
   //setting up the nav menu beckground-color fading up  
   var $nav = $("#nav");
-  var navOffsetTop = $nav.offset().top;
-    $(document).on('scroll', function(){
-      if ($nav.offset().top > 72) {
-        $nav.removeClass("no_scroll").addClass("scrolled");
-      } else {
-          $nav.removeClass("scrolled").addClass("no_scroll");
-      };
-    });
-
-    //setting up menu click jumping
-    var $menuLinks = $('#nav a');
-    $menuLinks.on('click', function() {
-      var $menuItem = $(this).attr('href');
-      var $itemPosition = $($menuItem).offset().top;
-      $('html, body').animate({
-        scrollTop: $itemPosition
-      }, 1000);
-    });
+  if ($nav.offset().top > 72) {
+    $nav.removeClass("no_scroll").addClass("scrolled");
+  };
+  
+  $(document).on('scroll', function(){
+    if ($nav.offset().top > 72) {
+      $nav.removeClass("no_scroll").addClass("scrolled");
+    } else {
+        $nav.removeClass("scrolled").addClass("no_scroll");
+    };
+  });
   
     //setting up slider
     var $windowHeight = $(window).height();
@@ -118,6 +111,7 @@ $(function(){
         "border-color": "transparent"
       }
     
+    
     if (menuIsOpen) {
       $mainMenu.addClass('menuBtnHide');
     }
@@ -140,21 +134,34 @@ $(function(){
       }
     });
 
+    //setting up menu click jumping
+    var $menuLinks = $('#nav a');
+    $menuLinks.on('click', function() {
+      var $menuItem = $(this).attr('href');
+      //console.log($menuItem);
+      var $itemPosition = $($menuItem).offset().top;
+      //console.log($itemPosition);
+      $('html, body').animate({
+        scrollTop: $itemPosition
+      }, 1000);
+      if (menuIsOpen) {
+        setTimeout(function() {
+          $mainMenu.toggleClass('menuBtnHide');
+          $mainNav.toggleClass('navHide');
+          menuIsOpen = false;
+          $('body').toggleClass('body-noscroll');
+        }, 500); 
+      }
+    });
+
     //setting up portfolio
     var $portfolioCollition = $('.portfolioCollection');
     var mixer = mixitup($portfolioCollition);
 
-    // $portfolioCollition.magnificPopup({
-    //   delegate: '.previewWrapper',
-    //   type:"image"
-    // });
-    
     var $popupOpenImage = $('.previewWrapper');
 
     $popupOpenImage.on('click', function(){
       var $imgSrc = $(this).find('img').attr('src');
-
-      // console.log($imgSrc);
 
       $.magnificPopup.open({
         items: {
